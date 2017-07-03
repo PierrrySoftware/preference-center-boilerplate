@@ -1,34 +1,24 @@
 {
-  "name": "kevin-child-theme",
+  "name": "preference-center-boilerplate",
   "version": "1.0.0",
-  "dependencies": {},
+  "main": "index.js",
+  "repository": "git@github.com:PierrrySoftware/preference-center-boilerplate.git",
+  "author": "Kevin McKernan <kevin@mckernan.in>",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "laravel-mix": "^1.0.7",
+    "webpack": "^3.0.0"
+  },
+  "scripts": {
+    "start": "yarn watch",
+    "dev": "NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development webpack --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
   "devDependencies": {
-    "browser-sync": "^2.13.0",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.0",
-    "gulp-cache": "^0.4.5",
-    "gulp-concat": "^2.6.0",
-    "gulp-concat-util": "^0.5.5",
-    "gulp-debug": "^3.0.0",
-    "gulp-filter": "^4.0.0",
-    "gulp-ignore": "^2.0.1",
-    "gulp-imagemin": "^3.0.2",
-    "gulp-inline-image-html": "^0.2.1",
-    "gulp-inline-source": "^3.0.0",
-    "gulp-load-plugins": "^1.2.4",
-    "gulp-newer": "^1.2.0",
-    "gulp-notify": "^2.2.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-rimraf": "^0.2.0",
-    "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^2.0.0-alpha",
-    "gulp-svgmin": "^1.2.2",
-    "gulp-task-loader": "^1.4.4",
-    "gulp-uglify": "^2.0.0",
-    "gulp-uglifycss": "^1.0.6",
-    "gulp-util": "^3.0.7",
-    "imagemin-jpeg-recompress": "^5.1.0",
-    "run-sequence": "^1.2.2"
+    "browser-sync": "^2.18.12",
+    "browser-sync-webpack-plugin": "^1.1.4"
   }
 }
